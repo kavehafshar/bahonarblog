@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Template made by // www.blacktheme.ir // copy url -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>صفحه اصلی</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-language" content="fa" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css'>
+    <meta name="description" content="<-BlogMetaDescription->" />
+    <meta name="generator" content="blogfa.com" />
+    <meta property="og:title" content="<-AutoPageTitle->" />
+    <meta property="og:site_name" content="<-BlogTitle->" />
+    <meta property="og:description" content="<-BlogMetaDescription->" />
+    <meta name="twitter:title" content="<-AutoPageTitle->" />
+    <meta name="twitter:description" content="<-BlogMetaDescription->" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="<-BlogTitle->"
+      href="<-BlogXmlLink->"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/rastikerdar/sahel-font/v3.4.0/dist/font-face.css"
+    />  
+    {% load static %}
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css" media="all" />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="http://theme.blogfa.com/public/theme.1.2.js"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript">
+      try {
+        cmt_caption[0] = "نظرات";
+        cmt_caption[1] = "نظر بدهيد";
+        cmt_caption[2] = "يک نظر";
+        cmt_caption[3] = "نظر";
+        cmt_blogid = "<-BlogId->";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="navlink">
+            <a href="javascript:void(0)" class="collapse-icon"
+              ><i class="fa fa-navicon"></i
+            ></a>
+            <a href="/">خانه</a>
+            {% if not user.is_authenticated %}
+
+            <BlogProfileLinkBlock>
+              <a href="signup/">ثبت نام</a></BlogProfileLinkBlock
+            >
+            <BlogEmailBlock
+              ><a href="signin/">ورود</a></BlogEmailBlock
+            >
+            {% endif %}
+
+            {% if user.is_authenticated %}
+            <a href="logout/">خروج</a>
+            {% endif %}
+
+            <a href="/posts/">مطالب</a>
+          </div>
+
+          <div>
+            <a href="https://uk.ac.ir">دانشگاه شهید باهنر کرمان</a>
+          </div>
+        </div>
+        <div id="append-navlink" class="container"></div>
+      </nav>
+
+      <div
+        class="blacktheme-parallax"
+        style="background-image: url('static/bg.png')"
+        data-speed="4"
+      >
+        <div class="blacktheme-overlay"></div>
+        <div class="blacktheme-blog">
+          <div class="container">
+            <h1><a href="/">وبلاگ عمومی دانشگاه</a></h1>
+            <h2>وبلاگی برای به اشتراک گذاشتن هر متنی که میخواهید</h2>
+            <a href="#content" class="direct">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {% for post in posts %}
+    <section class="container content" id="content">
+      <BLOGFA>
+        <div class="blacktheme-pst-wrp">
+
+          <img src="{% static 'avatar.png' %}" style="height:103px;"></img>
+          <div class="right">
+            <h2><a href="post/{{post.id}}">{{post.Name}}</a></h2>
+            {{post.text}}
+          </div>
+        </div>
+      </BLOGFA>
+    </section>
+    {% endfor %}
+
+    <section class="sidebar">
+      <div class="container">
+        <BlogProfile>
+          <div class="box">
+            <h6><i class="fa fa-info"></i> درباره وب</h6>
+            <BlogPhoto><img src="<-BlogPhotoLink->" /></BlogPhoto>
+            <-BlogAbout->
+          </div>
+        </BlogProfile>
+
+        <BlogLinksBlock>
+          <div class="box">
+            <h6><i class="fa fa-link"></i> پیوندها</h6>
+            <ul>
+              <BlogLinks>
+                <li><a href="<-LinkUrl->" target="_blank"><-LinkTitle-></a></li>
+              </BlogLinks>
+            </ul>
+          </div>
+        </BlogLinksBlock>
+
+        <div class="box">
+          <h6><i class="fa fa-code"></i> کدهای وب</h6>
+          <-BlogCustomHtml->
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+       
+        <div class="copyright">
+          قالب طراحی شده توسط
+          <a
+            href="http://blacktheme.ir/"
+            target="_blank"
+            title="بلک تم ، طراحی سایت و قالب"
+            >بلک تم</a
+          >
+        </div>
+        <!-- ♥
+            Dostan agar ghasde hemayat az BLACKTHEME ro darid
+            mamnon misham Link ro pak nakonid
+            koli be ma komak mikone 
+            vojode in link dar Weblog shoma .. 
+            TY ALL
+         ♥ -->
+      </div>
+    </footer>
+
+    {% if user.is_authenticated %}
+    <div class="fixed-action-btn horizontal ">
+      <a  href="sendpost/" class="btn-floating btn-large red">
+        <i class="material-icons">edit</i>
+      </a>
+    </div>
+    {% endif %}
+    
+
+    <!-- script -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      // navbar
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 150) {
+          $("nav").addClass("nav-fix");
+        }
+        if ($(this).scrollTop() < 150) {
+          $("nav").removeClass("nav-fix");
+          $("nav").removeClass("nav-sleep");
+          $("nav").removeClass("nav-show");
+        }
+        if ($(this).scrollTop() < 350) {
+          if ($("nav").hasClass("nav-show")) {
+            $("nav").removeClass("nav-show");
+            $("nav").addClass("nav-sleep");
+            $("#append-navlink .navlink").slideUp(500);
+            $(".navlink .collapse-icon i")
+              .addClass("fa-navicon")
+              .removeClass("fa-close");
+          }
+        }
+        if ($(this).scrollTop() > 350) {
+          $("nav").addClass("nav-show");
+        }
+      });
+
+      // collapse
+      $(".navlink").clone().appendTo("#append-navlink");
+      $(".navlink .collapse-icon").click(function () {
+        $("#append-navlink .navlink").slideToggle(500);
+        $(".navlink .collapse-icon i")
+          .toggleClass("fa-navicon")
+          .toggleClass("fa-close");
+      });
+      // parallax
+      $(".blacktheme-parallax").each(function () {
+        var $obj = $(this);
+        $(window).scroll(function () {
+          var yPos = $(window).scrollTop() / $obj.data("speed");
+          var bgpos = "50% " + yPos + "px";
+          $obj.css("background-position", bgpos);
+        });
+      });
+    </script>
+  </body>
+</html>
