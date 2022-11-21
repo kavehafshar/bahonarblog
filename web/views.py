@@ -64,3 +64,8 @@ def sendpost(request):
     context={'form':form}   
     return render(request, 'webview/sendpost.html',context)
     
+
+def likepost(request,id):
+    posti=Post.objects.get(id)
+    user=request.user
+    posti.likes.add(user)

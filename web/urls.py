@@ -12,4 +12,5 @@ urlpatterns = [
     path('signin/',views.signin,name='signin'),
     path('sendpost/',views.sendpost,name='sendpost'),
     path('logout/',views.signout,name='logout'),
+    path('like/<id>',views.likepost,name='like')
 ]
