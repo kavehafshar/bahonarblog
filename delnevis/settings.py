@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'web',  'tailwind',  'theme',
+    'web', 
 
 
 ]
@@ -120,9 +120,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
 
 STATIC_URL = '/static/'
-TAILWIND_APP_NAME = 'theme'
