@@ -7,10 +7,11 @@ from . import views
 app_name='web'
 urlpatterns = [
     
-     path('',views.home,name='home'),
+    path('',views.home,name='home'),
     path('signup/',views.signup,name='signup'),
     path('signin/',views.signin,name='signin'),
     path('sendpost/',views.sendpost,name='sendpost'),
     path('logout/',views.signout,name='logout'),
-    path('like/<id>',views.likepost,name='like')
+    path('like/<id>',views.likepost,name='like'),
+
 ]
