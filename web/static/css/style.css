@@ -225,6 +225,7 @@ input[type="submit"] {
   width: 100%;
   margin: 2em 0;
   letter-spacing: 4px;
+  border-radius: 25px;
 }
 
 input[type="submit"]:hover {
@@ -757,6 +758,7 @@ input.checkbox:checked:after {
     margin: 1.5em 0;
     padding: 0.8em;
     font-size: .85em;
+    border-radius: 25px;
   }
 
   .colorlibcopy-agile p {

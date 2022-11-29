@@ -1,7 +1,41 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .post-footer {
   padding-right: 2rem;
-}
 
+}
+.post-footer input:valid {
+  color: white;
+}
+.post-footer input[type="submit"]{
+  border: 1px solid red;
+  border-radius:25px;
+  padding: 5px 25px;
+  background-color:red;
+}
+.pepole-like{
+  display: flex;
+  margin-right: 15px;
+
+}
+.pepole-like b{
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
 .postcard {
   background-image: linear-gradient(to left, rgb(151, 162, 201), rgb(54, 19, 250));
   border-radius: 16px;
@@ -147,6 +181,7 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+
 }
 
 button,
@@ -322,7 +357,7 @@ a:hover {
   opacity: 0.6;
   height: 100%;
   width: 100%;
-  background: #f200ff;
+  /* background: #f200ff;
   background: -moz-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
   background: -webkit-gradient(left bottom,
       right top,
@@ -331,7 +366,9 @@ a:hover {
   background: -webkit-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
   background: -o-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
   background: -ms-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
-  background: linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
+  background: linear-gradient(-45deg, #f200ff 0, #ffba42 100%); */
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.309943960494354) 33%, rgba(0,212,255,1) 100%);
 }
 
 nav {
@@ -430,6 +467,7 @@ nav .navlink .collapse-icon {
   -webkit-transition: 0.3s all ease-out;
   -o-transition: 0.3s all ease-out;
   transition: 0.3s all ease-out;
+  color:#111;
 }
 
 .nav-sleep {
@@ -521,7 +559,7 @@ h6 {
 }
 
 .blacktheme-pst-wrp .fa {
-  background: -moz-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
+  /* background: -moz-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
   background: -webkit-gradient(left bottom,
       right top,
       color-stop(0, #f200ff),
@@ -531,7 +569,9 @@ h6 {
   background: -ms-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
   background: linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.309943960494354) 33%, rgba(0,212,255,1) 100%); 
 }
 
 .blacktheme-pst-wrp .right {
