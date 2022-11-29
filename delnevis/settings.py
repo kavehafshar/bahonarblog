@@ -38,8 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web',
-    'tailwind',
-    'theme',
     'django_browser_reload'
 
 
@@ -126,7 +124,6 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-TAILWIND_APP_NAME = 'theme'
 
 INTERNAL_IPS = [
     "127.0.0.1",
