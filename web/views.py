@@ -74,5 +74,6 @@ def likepost(request,id):
     posti=Post.objects.get(id=id)
     user=request.user
     posti.likes.add(user)
-    return HttpResponseRedirect('/')
+    #return HttpResponseRedirect('/')
+    return redirect('/')
 

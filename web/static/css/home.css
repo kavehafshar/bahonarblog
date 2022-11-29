@@ -4,7 +4,14 @@
 
 
 
+nav {
+  background-color: transparent;
+  box-shadow: none;
+}
 
+.blacktheme-overlay {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0 0 221 / 31%) 33%, rgb(187 66 20) 100%);
+}
 
 
 
@@ -357,18 +364,6 @@ a:hover {
   opacity: 0.6;
   height: 100%;
   width: 100%;
-  /* background: #f200ff;
-  background: -moz-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
-  background: -webkit-gradient(left bottom,
-      right top,
-      color-stop(0, #f200ff),
-      color-stop(100%, #ffba42));
-  background: -webkit-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
-  background: -o-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
-  background: -ms-linear-gradient(-45deg, #f200ff 0, #ffba42 100%);
-  background: linear-gradient(-45deg, #f200ff 0, #ffba42 100%); */
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.309943960494354) 33%, rgba(0,212,255,1) 100%);
 }
 
 nav {
