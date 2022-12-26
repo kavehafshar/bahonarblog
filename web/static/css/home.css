@@ -2,7 +2,23 @@
 
 
 
+.form-margin {
+  margin-right: 19px;
 
+}
+.col-6 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%
+}
+.header-button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
 
 nav {
   background-color: transparent;
@@ -13,16 +29,10 @@ nav {
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0 0 221 / 31%) 33%, rgb(187 66 20) 100%);
 }
 
-
-
-
-
-
-
-
-
 .post-footer {
   padding-right: 2rem;
+  display: inline-flex;
+  font-weight: bold;
 
 }
 .post-footer input:valid {
@@ -380,7 +390,7 @@ nav {
 
 nav .container {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: row;
   justify-content: space-between;
 }
@@ -446,7 +456,7 @@ nav .navlink .collapse-icon {
 .nav-fix {
   position: fixed;
   margin-top: -100px;
-  background: #fff;
+  background: #111;
   color: #111;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);

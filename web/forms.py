@@ -8,3 +8,7 @@ class signupForm(forms.Form):
     name=forms.CharField(label='name',max_length=20)
     username=forms.CharField(label='username',max_length=20)
     password=forms.CharField(label='password',max_length=20)
+
+
+class SendCommentForm(forms.Form):
+    content=forms.CharField(label='content',max_length=150)

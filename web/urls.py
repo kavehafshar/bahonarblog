@@ -13,5 +13,8 @@ urlpatterns = [
     path('sendpost/',views.sendpost,name='sendpost'),
     path('logout/',views.signout,name='logout'),
     path('like/<id>',views.likepost,name='like'),
+    path('yourposts/',views.yourposts,name='yourposts'),
+    path('comment/<id>',views.comment,name='comment'),
+    path('sendcomment/<id>',views.sendComment,name='SendComment'),
 
 ]
