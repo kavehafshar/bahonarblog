@@ -16,5 +16,6 @@ urlpatterns = [
     path('yourposts/',views.yourposts,name='yourposts'),
     path('comment/<id>',views.comment,name='comment'),
     path('sendcomment/<id>',views.sendComment,name='SendComment'),
+    path('deletepost/<id>',views.deletepost,name='deletepost')
 
 ]

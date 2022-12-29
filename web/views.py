@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 import datetime
 
 
-# Create your views here.
+
 def signup(request):
     if request.method=='POST':
         form=signupForm(request.POST)
@@ -107,3 +107,22 @@ def sendComment(request,id):
             new_comment = Comment.objects.create(content=content, author=author, post_connected=id,author_name=author_name)
             new_comment.save()
             return comment(request,id)
+
+
+def deletepost(request,id):
+    if request.method=='POST':
+        posts=Post.objects.filter(id=id)
+        posts.delete()
+        return yourposts(request)
+        # for post in posts:
+        #     if post.id==id:
+        #         post.
+        #         print('is id')
+        #         post.delete()
+        #         print('deleted')
+        #         return yourposts(request)
+    return yourposts(request)
+
+    
+    
+            
