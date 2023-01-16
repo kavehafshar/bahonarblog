@@ -1,6 +1,17 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <script type="text/javascript">
+        (function(){
+        var now = new Date();
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.async = true;
+        var script_address = 'https://cdn.yektanet.com/js/Bahonarblog.pythonanywhere.com/native-Bahonarblog.pythonanywhere.com-29648.js';
+        script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+        head.appendChild(script);
+        })();
+    </script>
 <!-- Template made by // www.blacktheme.ir // copy url -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>پست های شما</title>
@@ -34,7 +45,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;scroll-behavior:smooth}body{
 
 </header>
 <h1 style="text-align: center;">پست های شما</h1>
-<h2 style="text-align:left ;"><a href="/">برگشت به صفحه اصلی</a></h2>
+<h2 style="text-align:center ;"><a href="/">برگشت به صفحه اصلی</a></h2>
 
 
 {% for post in posts %}
@@ -70,6 +81,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%;scroll-behavior:smooth}body{
     </BLOGFA>
     {% endif %}
 {% endfor %}
+<div id="pos-article-display-78787"></div>
     <!-- <BlogNextAndPreviousBlock>
         <div class="pagination">
         <BlogPreviousPageBlock>
